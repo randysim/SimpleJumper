@@ -9,7 +9,7 @@ public class FollowPlayer : MonoBehaviour
     {
         transform.position = new Vector3(
             player.position.x, 
-            player.position.y, 
+            player.position.y + 3, 
             player.position.z - distanceBack
         );
     }
@@ -18,8 +18,8 @@ public class FollowPlayer : MonoBehaviour
     {
         transform.position = new Vector3(
             player.position.x, 
-            player.position.y, 
-            player.position.z - distanceBack
+            transform.position.y, 
+            transform.position.z
         );
     }
 }

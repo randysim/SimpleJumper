@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4818685663123355268
+--- !u!1 &1499976031627414186
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4818685663123355264}
-  - component: {fileID: 4818685663123355267}
-  - component: {fileID: 4818685663123355266}
-  - component: {fileID: 4818685663123355269}
-  - component: {fileID: 813419811195001329}
-  - component: {fileID: -5692572732033568647}
+  - component: {fileID: 1499976031627414182}
+  - component: {fileID: 1499976031627414181}
+  - component: {fileID: 1499976031627414180}
+  - component: {fileID: -3788620276585856076}
+  - component: {fileID: 4130412256267613778}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
+  m_Name: JumpBoost
+  m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4818685663123355264
+--- !u!4 &1499976031627414182
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4818685663123355268}
+  m_GameObject: {fileID: 1499976031627414186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.36, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.75, z: 1}
+  m_LocalPosition: {x: 11, y: 4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4818685663123355267
+--- !u!33 &1499976031627414181
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4818685663123355268}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4818685663123355266
+  m_GameObject: {fileID: 1499976031627414186}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1499976031627414180
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4818685663123355268}
+  m_GameObject: {fileID: 1499976031627414186}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4c47ccd7858778f4886c465d85a8102b, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,52 +83,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!50 &4818685663123355269
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4818685663123355268}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 3
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
---- !u!114 &813419811195001329
+--- !u!114 &-3788620276585856076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4818685663123355268}
+  m_GameObject: {fileID: 1499976031627414186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de6b7ab09c8121e4eb5390c39aef77fe, type: 3}
+  m_Script: {fileID: 11500000, guid: e77d4fbe1cd905b40ad20b7a2f16a93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerJumpForce: 20
-  PlayerMovementSpeed: 25
-  PlayerBody: {fileID: 4818685663123355269}
-  platform:
-    serializedVersion: 2
-    m_Bits: 256
---- !u!61 &-5692572732033568647
+  movement: {fileID: 0}
+  statName: PlayerJumpForce
+  newValue: 20
+--- !u!61 &4130412256267613778
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4818685663123355268}
+  m_GameObject: {fileID: 1499976031627414186}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -147,5 +122,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
